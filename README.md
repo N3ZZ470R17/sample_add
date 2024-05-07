@@ -1,9 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Sample app
 
-Things you may want to cover:
+Follows the Ruby on Rails 6th edition
 
 * Ruby version
 
