@@ -2,6 +2,14 @@ source "https://rubygems.org"
 
 ruby "3.0.4"
 
+# Gem Sass Rails
+gem "sassc"
+gem "sassc-rails"
+gem "bootstrap-sass"
+
+# Gem JQuery (Bootstrap)
+gem 'jquery-rails'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.3", ">= 7.1.3.2"
 
@@ -23,6 +31,8 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+# Rails Controller Testing
+gem 'rails-controller-testing'
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 

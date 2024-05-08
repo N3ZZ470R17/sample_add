@@ -1,0 +1,11 @@
+set mouse
+set autoindent
+set linenumbers
+set constantshow
+set indicator
+set positionlog
+set showcursor
+include "/usr/share/nano/html.nanorc"
+include "/usr/share/nano/sh.nanorc"
+include "/usr/share/nano/ruby.nanorc"
+include "/usr/share/nano/css.nanorc"
