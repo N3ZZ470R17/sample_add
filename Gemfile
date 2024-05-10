@@ -7,6 +7,7 @@ gem 'bootstrap', '~> 5.3', '>= 5.3.3'
 gem 'sass'
 gem 'sass-rails', '~> 5'
 gem "sassc"
+gem "sassc-rails"
 gem "cssbundling-rails", "~> 1.4"
 
 # Gem JQuery (Bootstrap)
