@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  
+  # Sesiones (Cap7)
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
+  delete '/logout', to: 'sessions#destroy'
+  
   # Paginas estaticas
   root 'static_pages#home'
   

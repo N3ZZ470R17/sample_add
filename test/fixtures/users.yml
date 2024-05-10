@@ -1,2 +1,8 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 # Usar en el cap 8 del tutos
+
+# Listing 8.26 a continuación:
+rodney:
+  name: Rodney Cordoba
+  email: rodneyc@example.com
+  password_digest: <%= User.digest('password') %>

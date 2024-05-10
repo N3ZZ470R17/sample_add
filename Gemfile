@@ -1,11 +1,13 @@
 source "https://rubygems.org"
 
-ruby "3.0.4"
+ruby "3.0.6"
 
 # Gem Sass Rails
+gem 'bootstrap', '~> 5.3', '>= 5.3.3'
+gem 'sass'
+gem 'sass-rails', '~> 5'
 gem "sassc"
-gem "sassc-rails"
-gem "bootstrap-sass"
+gem "cssbundling-rails", "~> 1.4"
 
 # Gem JQuery (Bootstrap)
 gem 'jquery-rails'

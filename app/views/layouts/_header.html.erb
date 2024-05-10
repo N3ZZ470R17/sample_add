@@ -1,12 +1,37 @@
-    <header class="navbar navbar-inverse">
-      <div class="container">
-        <%= link_to "sample add", root_path, id: "logo" %>
+    <header class="navbar navbar-expand-lg sticky-top navbar-inverse bg-dark border-body" data-bs-theme="dark">
+      <div class="container-fluid">
+        <%= link_to "sample add", root_path, id: "logo"%>
         <nav>
-          <ul class="nav navbar-new navbar-right">
-            <li><%= link_to "Home", root_path  %></li>
-            <li><%= link_to "Help", help_path  %></li>
-            <li><%= link_to "Log In", '#'  %></li>
-          </ul>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
+              <li class="nav-item btn btn-dark"><%= link_to "Home", root_path  %></li>
+              
+              <li class="nav-item btn btn-dark"><%= link_to "Help", help_path  %></li>
+              
+              <% if logged_in? %>
+                <li class="nav-item btn btn-dark"><%= link_to "Users", '#' %></li>
+                
+                <li class="nav-item dropdown">
+                  <button type="button" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropwdown" aria-expanded="false">
+                    Account <b class="caret"></b>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><button class="dropdown-item" type="button"><%= link_to "Profile", current_user %></button></li>
+                    <li><button class="dropdown-item" type="button"><%= link_to "Settings", '#' %></button></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><button class="dropdown-item" type="button"><%= link_to "Log out", logout_path, method: :delete %></button></li>
+                  </ul>
+                
+                </li>
+                
+                <% else %>
+              <li class="nav-item btn btn-dark"><%= link_to "Log In", login_path %></li>
+              <% end %>
+            </ul>
+            </div>
         </nav>
       </div>
     </header>
