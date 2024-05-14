@@ -2,16 +2,21 @@ source "https://rubygems.org"
 
 ruby "3.0.6"
 
-# Gem Sass Rails
+# Gem Styling Rails
 gem 'bootstrap', '~> 5.3', '>= 5.3.3'
 gem 'sass'
 gem 'sass-rails', '~> 5'
 gem "sassc"
 gem "sassc-rails"
 gem "cssbundling-rails", "~> 1.4"
+#gem "bootstrap-will_paginate"
+gem "will_paginate"
 
 # Gem JQuery (Bootstrap)
 gem 'jquery-rails'
+
+# Gem faker
+gem 'faker'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.3", ">= 7.1.3.2"

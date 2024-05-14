@@ -6,3 +6,17 @@ rodney:
   name: Rodney Cordoba
   email: rodneyc@example.com
   password_digest: <%= User.digest('password') %>
+
+# Segundo usuario para evitar accesos no autorizados
+alex:
+  name: Alexander Apontex
+  email: apontex@example.com
+  password_digest: <%= User.digest('password') %> 
+
+# Genera 30 usuarios para las pruebas
+<% 30.times do |n| %>
+user_<$= n%>:
+  name: <%= "User #{n}" %>
+  email: <%= "user-#{n}@example.com" %>
+  password_digest: <%= User.digest('password') %>
+<% end %>

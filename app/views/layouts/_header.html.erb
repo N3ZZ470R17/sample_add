@@ -12,6 +12,7 @@
               <li class="nav-item btn btn-dark"><%= link_to "Help", help_path  %></li>
               
               <% if logged_in? %>
+                <li><%= link_to "Users", users_path %></li>
                 <li class="nav-item btn btn-dark"><%= link_to "Users", '#' %></li>
                 
                 <li class="nav-item dropdown">
@@ -20,7 +21,7 @@
                   </button>
                   <ul class="dropdown-menu dropdown-menu-dark">
                     <li><button class="dropdown-item" type="button"><%= link_to "Profile", current_user %></button></li>
-                    <li><button class="dropdown-item" type="button"><%= link_to "Settings", '#' %></button></li>
+                    <li><button class="dropdown-item" type="button"><%= link_to "Settings", edit_user_path(current_user) %></button></li>
                     <li><hr class="dropdown-divider"></li>
                     <li><button class="dropdown-item" type="button"><%= link_to "Log out", logout_path, method: :delete %></button></li>
                   </ul>
