@@ -1,0 +1,6 @@
+<h1>Sample Add</h1>
+
+<p> Hola <%= @user.name %>, </p>
+<p>Bienvenido a Sample Add. A continuación, haz clic en el enlace para activar tu cuenta:</p>
+
+<%= link_to "Activate", edit_account_activation_url(@user.activation_token, email: @user.email) %>

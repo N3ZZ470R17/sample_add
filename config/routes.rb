@@ -26,5 +26,8 @@ Rails.application.routes.draw do
 
   # Recurso de usuarios
   resources :users
+
+  # Recurso para activacion de cuentas
+  resources :account_activations, only: [:edit]
 end
 

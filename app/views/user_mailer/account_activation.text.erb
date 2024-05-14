@@ -1,0 +1,5 @@
+Hola <%= @user.name %>,
+
+Bienvenido a Sample Add. A continuación, haz clic en el enlace para activar tu cuenta:
+
+<%= edit_account_activation_url(@user.activation_token, email: @user.email) %>

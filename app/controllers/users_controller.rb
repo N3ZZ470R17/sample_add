@@ -34,10 +34,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params) # Implementacion incompleta
     if @user.save
-      reset_session
-      log_in @user
-      flash[:success] = "Bienvenido a Sample Add!"
-      redirect_to @user
+      @user.send_activation_email
+      flash[:info] = "Mira tu buzon para activar tu cuenta"
+      redirect_to root_url
     else
       # flash[:error] = "Something went wrong"
       render 'new'
