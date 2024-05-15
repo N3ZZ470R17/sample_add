@@ -8,6 +8,7 @@ class UsersController < ApplicationController
   # Accion de "show" buscando por :id como parametro del metodo find
   def show
     @user = User.find(params[:id])
+    @microposts = @user.microposts.paginate(page: params[:page])
     #debugger (Depuracion en consola del servidor de Rails)
   end
   
@@ -61,14 +62,15 @@ class UsersController < ApplicationController
 
     # Before filters
 
-    # Confirma un usuario ya "logueado"
-    def logged_in_user
-      unless logged_in?
-        store_location
-        flash[:danger] = "Inicia sesión para continuar"
-        redirect_to login_url        
-      end
-    end
+    # # # Ya aplicado en application_controller.rb
+    # # Confirma un usuario ya "logueado"
+    # def logged_in_user
+    #   unless logged_in?
+    #     store_location
+    #     flash[:danger] = "Inicia sesión para continuar"
+    #     redirect_to login_url        
+    #   end
+    # end
 
     # Confirma un usuario autorizado
     def correct_user

@@ -73,5 +73,16 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.authenticated?(:remember, '')
   end
   
+  # Area de micropublicaciones (Twitter be-like)
+
+  # Micropost asociados con X usuario DEBEN ser destruidos
+  test "associated micropost should be destroyed" do
+    @user.save
+    @user.microposts.create!(content: "Lorem ipsum")
+    assert_difference "Micropost.count", -1 do
+      @user.destroy
+    end
+  end
+  
 end
 

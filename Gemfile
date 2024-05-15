@@ -18,6 +18,13 @@ gem 'jquery-rails'
 # Gem faker
 gem 'faker'
 
+# Gem Active Storage validations
+gem 'active_storage_validations'
+
+# Gems for image resizing (imagemagick)
+gem 'image_processing'
+gem 'mini_magick'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.3", ">= 7.1.3.2"
 

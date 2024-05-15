@@ -33,5 +33,8 @@ Rails.application.routes.draw do
   # Recurso para reset de contraseñas
   resources :password_resets, only: [:new, :create, :edit, :update]
 
+  # Recurso para microposts
+  resources :microposts, only: [:create, :destroy]
+  
 end
 

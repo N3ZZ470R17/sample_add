@@ -16,3 +16,11 @@ User.create!(name: "Example User", email: "example@localhost.net", password: "fo
     password = "password"
     User.create!(name: name, email: email, password: password, password_confirmation: password, activated: true, activated_at: Time.zone.now)
 end
+
+# Area de micropublicaciones
+#   Genera microposts para una cierta cantidad de usuarios
+users = User.order(:created_at).take(6)
+50.times do
+    content = Faker::Lorem.sentence(word_count: 5)
+    users.each { |user| user.microposts.create!(content: content) }
+end

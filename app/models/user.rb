@@ -1,5 +1,8 @@
 class User < ApplicationRecord
+  # Relacionado con micropublicaciones
+  has_many :microposts, dependent: :destroy
 
+  # Sesiones
   attr_accessor :remember_token, :activation_token, :reset_token
 
   before_save :downcase_email
@@ -65,6 +68,13 @@ class User < ApplicationRecord
   # Retorna verdadero si un reset de clave ha expirado
   def password_reset_expired?
     reset_sent_at < 2.hours.ago
+  end
+
+  # #### Area de micropublicaciones (microposts)
+  # Define un proto-feed
+  # Implementacion completa (Cap 14 ~ Final)
+  def feed
+    Micropost.where("user_id = ?", id)
   end
 
   private

@@ -1,0 +1,29 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+orange:
+  content: "I just ate an orange!. OMFG. Awful af! lmao."
+  created_at: <%= 10.minutes.ago %>
+  user: rodney
+
+zoo:
+  content: "Just saw the earliest video on YouTube."
+  created_at: <%= 2.hours.ago %>
+  user: alex
+
+youtube_video:
+  content: "Just saw the worst video in my life. Don't watch it boys!."
+  created_at: <%= 2.years.ago %>
+  user: alex
+
+most_recent:
+  content: "Cooking up"
+  created_at: <%= Time.zone.now %>
+  user: rodney
+
+# Generador Lorem de micropost
+<% 30.times do |n| %>
+micropost_<%= n %>:
+  content: <%= Faker::Lorem.sentence(word_count: 5) %>
+  created_at: <%= 42.days.ago %>
+  user: rodney
+<% end %>
