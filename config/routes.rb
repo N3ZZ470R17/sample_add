@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+
   # Sesiones (Cap7)
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
@@ -29,5 +29,9 @@ Rails.application.routes.draw do
 
   # Recurso para activacion de cuentas
   resources :account_activations, only: [:edit]
+
+  # Recurso para reset de contraseñas
+  resources :password_resets, only: [:new, :create, :edit, :update]
+
 end
 
