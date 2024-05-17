@@ -340,7 +340,7 @@ DEPENDENCIES
   active_storage_validations
   bcrypt
   bootsnap
-  bootstrap (~> 5.3, >= 5.3.3)
+  bootstrap (~> 5.3.3)
   capybara
   cssbundling-rails (~> 1.4)
   debug
@@ -360,7 +360,7 @@ DEPENDENCIES
   sassc
   sassc-rails
   selenium-webdriver
-  sprockets-rails
+  sprockets-rails (~> 3.4.2)
   sqlite3 (= 1.7.3)
   stimulus-rails
   turbo-rails

@@ -3,7 +3,7 @@ source "https://rubygems.org"
 ruby "3.0.6"
 
 # Gem Styling Rails
-gem 'bootstrap', '~> 5.3', '>= 5.3.3'
+gem 'bootstrap', '~> 5.3.3'
 gem 'sass'
 gem 'sass-rails', '~> 5'
 gem "sassc"
@@ -29,7 +29,7 @@ gem 'mini_magick'
 gem "rails", "~> 7.1.3", ">= 7.1.3.2"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
-gem "sprockets-rails"
+gem "sprockets-rails", "~> 3.4.2"
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
